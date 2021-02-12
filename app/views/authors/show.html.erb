@@ -1,0 +1,10 @@
+<h1>Author's Profile</h1>
+
+<h2>Name: <%= @author.name %> </h2>
+
+<h3>Books: </h3>
+<ul>
+    <% @author.books.each do |b| %>
+        <li><%= b.title %></li>
+    <%end%>
+</ul>

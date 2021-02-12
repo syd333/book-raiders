@@ -1,0 +1,5 @@
+<h1> <%= @genre.name %> </h1>
+
+<% @genre.books.each do |b| %>
+<h4> Book Title: <%= b.title %> </h4>
+<%end%>

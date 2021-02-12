@@ -1,0 +1,21 @@
+<h1>Add a review </h1>
+
+<% form_for @review do |f| %>
+    <%= f.collection_select :book_id, @books, :id, :title %>
+    <%= f.collection_select :user_id, @users, :id, :name%>
+    <%= f.label :message %>
+    <%= f.text_field :message %>
+    <%= f.label :rating %>
+    <div>
+    <%= f.radio_button :rating, "1" %>
+    <%= f.label :rating %>
+    <%= f.radio_button :rating, "2" %>
+    <%= f.label :rating %>
+    <%= f.radio_button :rating, "3" %>
+    <%= f.label :rating %>
+    <%= f.radio_button :rating, "4" %>
+    <%= f.label :rating %>
+    <%= f.radio_button :rating, "5" %>
+    </div>
+    <%= f.submit%>
+<%end%>
