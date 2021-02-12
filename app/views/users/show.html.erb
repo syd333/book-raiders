@@ -1,11 +1,11 @@
 <h1>Welcome! <%= @user.name%> </h1>
 
 <% @user.reviews.each do |b| %>
-    <%= b.book.title %>: <br>
-    Rating: <%= b.rating %> <br>
-    <%= b.message %><br>
-    <%= link_to "Edit", edit_review_path(b)%>
-    <%= button_to "Delete", b, method: :delete%>
+    <div><%= b.book.title %>: </div>
+    <div>Rating: <%= b.rating %></div>
+    <div><%= b.message %></div>
+    <div><%= link_to "Edit", edit_review_path(b)%></div>
+    <div><%= button_to "Delete", b, method: :delete%></div>
 <%end%>
 
 <%= link_to "Books", books_path %>
