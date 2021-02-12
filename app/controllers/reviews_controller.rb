@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
 
     before_action :find_review, only: [:edit, :update, :destroy]
 
-    before_action :set_user_book, only: [:new, :create]
+    before_action :set_user_book, only: [:new, :create, :edit, :update]
 
     def new
         @review = Review.new 
@@ -15,6 +15,23 @@ class ReviewsController < ApplicationController
         else   
             render :new
         end
+    end
+
+    def edit 
+
+    end
+
+    def update 
+        @review.update(review_params)
+        if @review.save
+            redirect_to @review.book
+        else  
+            render :edit 
+        end
+    end
+
+    def destroy
+        
     end
 
     private

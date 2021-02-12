@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'reviews/new'
+  get 'reviews/edit'
   resources :reviews
   resources :books
   resources :genres
