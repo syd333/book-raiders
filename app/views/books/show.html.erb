@@ -9,7 +9,7 @@
 <h4>Reviews: </h4>
 <ul>
 <% @book.reviews.each do |r| %>
-    <li><%= r.user.name %> : <%= r.message %></li>
+    <li><%= link_to r.user.name, r.user %> : <%= r.message %></li>
 <%end%>
 </ul>
 

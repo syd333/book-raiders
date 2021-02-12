@@ -1,7 +1,7 @@
 class Book < ApplicationRecord
   belongs_to :author
   belongs_to :genre
-  has_many :reviews 
+  has_many :reviews, dependent: :destroy
 
  
 
