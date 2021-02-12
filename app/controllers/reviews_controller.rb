@@ -18,7 +18,6 @@ class ReviewsController < ApplicationController
     end
 
     def edit 
-
     end
 
     def update 
@@ -31,7 +30,7 @@ class ReviewsController < ApplicationController
     end
 
     def destroy
-        
+
     end
 
     private
