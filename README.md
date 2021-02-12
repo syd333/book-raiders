@@ -58,7 +58,9 @@ Login | Signup for User
 
 
 FAKER :::
-names [author, user, genre] | Faker::Name.name
+names [user] | Faker::Name.name
+names [author] | Faker::Book.author
+title [book] | Faker::Book.title
 category [genre] | Faker::Book.genre
 review message [message]
 
