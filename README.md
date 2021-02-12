@@ -55,3 +55,11 @@ Create author if not exist
 Create genre if not exist 
 Cool CSS! 
 Login | Signup for User
+
+
+FAKER :::
+names [author, user, genre] | Faker::Name.name
+category [genre] | Faker::Book.genre
+review message [message]
+
+// ratings [generate rand nums 1-5]
