@@ -2,7 +2,7 @@
 <h1>List of Books </h1>
 
 <% @books.each do |b| %>
-<h3> <%= link_to b.title, b %> </h3>
+<h3> <%= link_to b.title, b %> | Rating: <%= b.avg_rating %></h3> 
 <%end%>
 
 <%= link_to "Add review", new_review_path %>

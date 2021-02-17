@@ -14,6 +14,12 @@ class ReviewsController < ApplicationController
         # else  
         #     @review = current_user.reviews.build
         # end
+        # if @book
+        #     @review = @book.reviews.new
+        # else  
+        #     @review = current_user.reviews.new
+
+        # end
     end
 
     def create 
@@ -62,7 +68,6 @@ class ReviewsController < ApplicationController
     end
 
     def review_params
-        
         params.require(:review).permit(:message, :rating, :book_id)
     end
 

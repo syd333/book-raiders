@@ -3,10 +3,8 @@ class UsersController < ApplicationController
     before_action :find_user, only: [:show, :destroy]
 
     # skip_before_action :require_login, only: [:new, :create, :destroy]
-    
 
     def show
-
     end
 
     def new 
