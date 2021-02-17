@@ -6,12 +6,12 @@ class SessionsController < ApplicationController
     end
 
     def create 
-        # byebug
         user = User.find_by(name: params[:name])
         if user && user.authenticate(params[:password])
             log_in_user(user.id)
             redirect_to user_path(user)
-        else  
+        else 
+            flash.now[:danger] = 'Invalid email/password combination'
             render :new 
         end
     end

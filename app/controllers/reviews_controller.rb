@@ -7,7 +7,8 @@ class ReviewsController < ApplicationController
     
 
     def new
-        @review = Review.new 
+        @review = Review.new
+        @book = Book.find_by_id(params[:book_id])
         # id = params[:book_id]
         # if id && @book = Book.find_by_id(id)
         #     @review = @book.review.build 
@@ -22,9 +23,10 @@ class ReviewsController < ApplicationController
         # end
     end
 
-    def create 
+    def create
         @review = Review.new(review_params)
-        @review.user_id = current_user 
+        @review.user_id = current_user
+        @review.book_id = params[:book_id]
         if @review.save
             redirect_to @review.book
         else   
@@ -68,7 +70,7 @@ class ReviewsController < ApplicationController
     end
 
     def review_params
-        params.require(:review).permit(:message, :rating, :book_id)
+        params.require(:review).permit(:message, :rating)
     end
 
     

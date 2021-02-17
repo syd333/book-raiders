@@ -1,8 +1,8 @@
+<div class = "container">
 <h1> <%= @book.title %> </h1>
 
 <h4>Author: <%= @book.author.name %> </h4>
 <h4>Genre: <%= @book.genre.name %> </h4>
-
 
 <h4>Rating: <%= @book.avg_rating %></h4>
 
@@ -13,8 +13,7 @@
 <%end%>
 </ul>
 
-
 <%= link_to "Add review", new_book_review_path(@book) %>
 <%= link_to "Back to Index", books_path%>
 
-
+</div>

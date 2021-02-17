@@ -1,5 +1,5 @@
-<h1>Login!!</h1>
-
+<div class= "container p-10">
+<h1>Login</h1>
 
 <%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
     <div>
@@ -12,5 +12,5 @@
     </div>
     <%= submit_tag "Login" %>
 <% end %>
-
 <h5>New User? <%=link_to "Create an account", new_user_path %></h5>
+</div>

@@ -1,3 +1,4 @@
+<div class = "container">
 <h1>Welcome! <%= @user.name%> </h1>
 
 <% @user.reviews.each do |b| %>
@@ -8,3 +9,4 @@
     <div><%= button_to "Delete", b, method: :delete%></div>
 <%end%>
 
+</div>

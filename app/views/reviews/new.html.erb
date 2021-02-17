@@ -6,12 +6,8 @@
         <%end%> 
     <%end%>
     
-<%= form_for @review do |f| %>
-    <div>
-    <%= f.label "Book:" %>
-    <%= f.collection_select :book_id, @books, :id, :title %>
-    </div>
-
+<%= form_for @review do |f| %> 
+    <%= hidden_field_tag :book_id, @book.id %>
     <div>
     <%= f.label :message, "Message: " %>
     <%= f.text_area :message %>
