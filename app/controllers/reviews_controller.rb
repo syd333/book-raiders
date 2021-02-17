@@ -4,17 +4,32 @@ class ReviewsController < ApplicationController
 
     before_action :set_user_book, only: [:new, :create, :edit, :update]
 
+    
+
     def new
         @review = Review.new 
+        # id = params[:book_id]
+        # if id && @book = Book.find_by_id(id)
+        #     @review = @book.review.build 
+        # else  
+        #     @review = current_user.reviews.build
+        # end
     end
 
     def create 
-        @review = Review.new(review_params) 
+        @review = Review.new(review_params)
+        @review.user_id = current_user 
         if @review.save
             redirect_to @review.book
         else   
             render :new
         end
+        # @review = current_user.reviews.build(review_params)
+        # if @review.save 
+        #     redirect_to @review.book
+        # else  
+        #     render :new 
+        # end
     end
 
     def edit 
@@ -22,6 +37,7 @@ class ReviewsController < ApplicationController
 
     def update 
         @review.update(review_params)
+        @review.user_id = current_user 
         if @review.save
             redirect_to @review.book
         else  
@@ -46,6 +62,9 @@ class ReviewsController < ApplicationController
     end
 
     def review_params
-        params.require(:review).permit(:message, :rating, :user_id, :book_id)
+        
+        params.require(:review).permit(:message, :rating, :book_id)
     end
+
+    
 end

@@ -1,0 +1,16 @@
+<h1>Login!!</h1>
+
+
+<%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
+    <div>
+        <%= label_tag "Name" %>
+        <%= text_field_tag :name, params[:name] %>
+    </div>
+    <div>
+        <%= label_tag "Password" %>
+        <%= password_field_tag :password, params[:password] %>
+    </div>
+    <%= submit_tag "Login" %>
+<% end %>
+
+<h5>New User? <%=link_to "Create an account", new_user_path %></h5>

@@ -9,11 +9,12 @@
 <h4>Reviews: </h4>
 <ul>
 <% @book.reviews.each do |r| %>
-    <li><%= link_to r.user.name, r.user %> : <%= r.message %></li>
+    <li><%=r.user.name%> : <%= r.message %></li>
 <%end%>
 </ul>
 
 
-<%= link_to "Add review", new_review_path %>
+<%= link_to "Add review", new_book_review_path(@book) %>
 <%= link_to "Back to Index", books_path%>
-<%= link_to "Edit", edit_review_path(@book)%>
+
+

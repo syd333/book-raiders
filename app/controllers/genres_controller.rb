@@ -2,6 +2,8 @@ class GenresController < ApplicationController
 
     before_action :find_genre, only: [:show]
 
+    
+
     def index
         @genres = Genre.all 
     end
