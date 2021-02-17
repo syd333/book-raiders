@@ -1,8 +1,9 @@
 
-<h1>List of Books </h1>
-
+<p> List of Books::: </p>
+<ul class="list-group">
 <% @books.each do |b| %>
-<h3> <%= link_to b.title, b %> | Rating: <%= b.avg_rating %></h3> 
+  <li class="list-group-item disabled"><%= link_to b.title, b %> | Rating: <%= b.avg_rating %></li>
+</ul>
 <%end%>
 
 <%= link_to "Add review", new_review_path %>
