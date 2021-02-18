@@ -13,6 +13,11 @@
  */
 
  @import "bootstrap";
+
+ .error {
+     color: red;
+     border: red;
+ }
  
 /* SCSS HEX */
 $rich-black-fogra-29: #001524ff;
