@@ -1,12 +1,15 @@
 <div class = "container">
-<h1>Welcome! <%= @user.name%> </h1>
-
-<% @user.reviews.each do |b| %>
-    <div><%= b.book.title %>: </div>
-    <div>Rating: <%= b.rating %></div>
-    <div><%= b.message %></div>
-    <div><%= link_to "Edit", edit_review_path(b)%></div>
-    <div><%= button_to "Delete", b, method: :delete%></div>
-<%end%>
-
+<div class="card" style="width: 18rem;">
+<div class="card-body">
+  <h5 class="card-title">Welcome <%= @user.name %></h5>
+  <% @user.reviews.each do |b| %>
+  <h6 class="card-subtitle mb-2 ">Book Title: <%= b.book.title %>: </h6>
+  <h6 class="card-subtitle mb-2 ">Rating: <%= b.rating %> </h6>
+  <p class="card-text mb-2 text-muted"><%= b.message %></p>
+  <a href="#" class="card-link"><%= link_to "Edit", edit_review_path(b)%></a> <br>
+  <a href="#" class="card-link"><%= button_to "Delete", b, method: :delete%></a> <br>
+  <% end %> 
 </div>
+</div>
+</div>
+

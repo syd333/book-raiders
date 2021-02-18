@@ -46,7 +46,14 @@
 </div>
 
   <body>
-    
+    <% if flash %>
+      <% flash.each do |key, msg| %>
+        <div class= "<%= key %>">
+        <%= msg %>
+        </div>
+      <% end%>
+    <% end %>
+
     
     
     <%= yield %>
