@@ -1,6 +1,6 @@
 <div class ="container">
-<p> List of Books::: </p>
-<ul class="list-group">
+<p> Books that need your review : </p>
+<ul class="list-group list-group-flush">
 <% @books.each do |b| %>
   <li class="list-group-item disabled"><%= link_to b.title, b %> | Rating: <%= b.avg_rating %></li>
 </ul>

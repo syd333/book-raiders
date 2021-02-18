@@ -1,11 +1,11 @@
 <div class = "container">
-<div class="card" style="width: 18rem;">
+<div class="card text-center style="width: 18rem;">
 <div class="card-body">
-  <h5 class="card-title">Welcome <%= @user.name %></h5>
+  <h5 class="card-title">Welcome <%= @user.name %>!</h5>
   <% @user.reviews.each do |b| %>
   <h6 class="card-subtitle mb-2 ">Book Title: <%= b.book.title %>: </h6>
   <h6 class="card-subtitle mb-2 ">Rating: <%= b.rating %> </h6>
-  <p class="card-text mb-2 text-muted"><%= b.message %></p>
+  <div class="card-text mb-2"> Review: <%= b.message %></div>
   <a href="#" class="card-link"><button><%= link_to "Edit", edit_review_path(b)%></button></a> <br>
   <a href="#" class="card-link"><%= button_to "Delete", b, method: :delete%></a> <br>
   <% end %> 
