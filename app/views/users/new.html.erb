@@ -3,7 +3,7 @@
 
 <% if @user.errors.any? %>
     <% @user.errors.full_messages.each do |msg| %>
-        <div> <%= msg %> </div>
+        <div class="text-danger"> <%= msg %> </div>
     <%end%> 
 <%end%>
 <%= form_tag ({controller: 'users', action: 'create', method: 'post'}) do %>
