@@ -10,6 +10,9 @@ require 'faker'
 #need Destory.all
 # RATING = rand(1..5)
 
+User.destroy_all 
+Author.destroy_all
+
 10.times do 
     User.create(name: Faker::Name.name)
 end
