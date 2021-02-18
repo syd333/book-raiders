@@ -6,7 +6,7 @@
   <h6 class="card-subtitle mb-2 ">Book Title: <%= b.book.title %>: </h6>
   <h6 class="card-subtitle mb-2 ">Rating: <%= b.rating %> </h6>
   <p class="card-text mb-2 text-muted"><%= b.message %></p>
-  <a href="#" class="card-link"><%= link_to "Edit", edit_review_path(b)%></a> <br>
+  <a href="#" class="card-link"><button><%= link_to "Edit", edit_review_path(b)%></button></a> <br>
   <a href="#" class="card-link"><%= button_to "Delete", b, method: :delete%></a> <br>
   <% end %> 
 </div>
