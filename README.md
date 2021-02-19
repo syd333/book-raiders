@@ -1,67 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+BookRaiders is an application where you can rate books and save them in your profile.
 
-Things you may want to cover:
+Getting Started
+BookRaiders runs on Ruby 2.6.1. and Postgres database.
 
-* Ruby version
+Installing locally
+To get it up and running locally run the following commands in the root directory:
 
-* System dependencies
+Run bundle install
+bundle install
 
-* Configuration
+Create the database
+rails db:create
 
-* Database creation
+Run the migration files
+rails db:migrate
 
-* Database initialization
+Run the seed data
+rails db:seed
 
-* How to run the test suite
+Run the app on the local host
+rails s
 
-* Services (job queues, cache servers, search engines, etc.)
+Help
+You can use issues in github for that.
 
-* Deployment instructions
-
-* ...
-
-Domain model with attributes (also foreign keys):
-                   User 
-                      |
-                  Review
-                      |
-Author --< Book >-- Genre
-
-User: name (str), 
-Review: user id(foreign), book id(foreign), message(str), rating(int)
-Book: title(str), author id(foreign), genre id(foreign)
-Author: name(str)
-Genre: name(str)
-
-User: has many reviews, has many books through reviews
-Reviews: belongs to users, belongs to books 
-Author: has many books, has many genres through books
-Books: belongs to author, belongs to genre, has many reviews
-Genre: has many books, has many authors through books
-
-
-User will be able to:
-Create a review on book [validates + error messaging]
-Read all reviews based on an instance of book
-Read all reviews based on an instance of author
-Read all reviews based on an instance of genre
-Edit review 
-Delete a review
-Stretch goals:::
-Create author if not exist
-Create genre if not exist 
-Cool CSS! 
-Login | Signup for User
-
-
-FAKER :::
-names [user] | Faker::Name.name
-names [author] | Faker::Book.author
-title [book] | Faker::Book.title
-category [genre] | Faker::Book.genre
-review message [message]
-
-// ratings [generate rand nums 1-5]
+Note on Patches/Pull Requests
+Fork the project.
+Make your feature addition or bug fix.
+Add tests for it. This is important so I don’t break it in a future version unintentionally.
+Commit, do not mess with rakefile, version, or history. (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+Send me a pull request. Bonus points for topic branches.

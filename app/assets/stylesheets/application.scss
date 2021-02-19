@@ -14,8 +14,14 @@
 
  @import "bootstrap";
 
+
 *{
     font-family: 'Roboto', sans-serif;
+ }
+
+ h2.aboutus {
+    font-family: 'Sarabun', sans-serif;
+    color: rgb(163, 235, 253);
  }
 
  h1.text-center {
@@ -29,7 +35,7 @@
  }
 
  .jumbotron-fluid {
-    background-color: rgb(175, 55, 46);
+    background-color: black;
     background-image: url(lines2.jpg);
  }
 
@@ -95,6 +101,10 @@ h3 {
     color: white;
 }
 
+h5 {
+    color: white
+}
+
 .footer {
     position: relative;
     margin-top: -150px; 
@@ -107,4 +117,3 @@ h3 {
      color: red;
      border: red;
  }
- 

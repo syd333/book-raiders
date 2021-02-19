@@ -9,7 +9,7 @@
 <h4>Reviews: </h4>
 <ul>
 <% @book.reviews.each do |r| %>
-    <li><h5><%=r.user.name%></h5> <p><%= r.message %></p></li>
+    <li><h5><%=r.user.name%></h5> <%= r.message %></li>
 <%end%>
 </ul>
 
